@@ -71,8 +71,6 @@ export class SignUpComponent implements OnInit {
   }
  
 }
-
-
 export default class Validation {
   static match(controlName: string, checkControlName: string): ValidatorFn {
     return (controls: AbstractControl) => {
