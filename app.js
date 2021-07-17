@@ -15,7 +15,7 @@ const dotenv = require('dotenv').config()
 
 var app = express();
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3333;
 
 // Logger
 app.use(logger('dev'));
