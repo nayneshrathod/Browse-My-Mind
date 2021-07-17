@@ -6,9 +6,9 @@
   "engines": {
     "node": "14.x"
   },
-  "scripts": { 
+  "scripts": {
     "serve": "node app.js",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

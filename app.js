@@ -1,17 +1,14 @@
-require('./config/config');
 require('./models/db');
 require('./config/passportConfig');
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
 const rtsIndex = require('./routes/index.router');
 
-const dotenv = require('dotenv').config()
+require('dotenv').config()
 
 var app = express();
 
@@ -45,7 +42,7 @@ app.use(passport.initialize());
 app.use('/api', rtsIndex);
 
 app.get("/", (req, res) => {
-    return res.send("Wel Come");
+    return res.send("<h1>Wel Come To Mind Browser Assignment</h1>");
 })
 
 // error handler
@@ -54,8 +51,7 @@ app.use((err, req, res, next) => {
         var valErrors = [];
         Object.keys(err.errors).forEach(key => valErrors.push(err.errors[key].message));
         res.status(422).send(valErrors)
-    }
-    else {
+    } else {
         console.log(err);
     }
 });
