@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:3333/api',
-  // apiBaseUrl: 'https://browsemymind.herokuapp.com'
-  // apiBaseUrl: 'https://browsemymind.herokuapp.com/api'
+  apiBaseUrl: 'http://localhost:3000/api',  
 
 };
 

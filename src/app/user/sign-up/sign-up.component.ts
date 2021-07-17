@@ -30,14 +30,14 @@ export class SignUpComponent implements OnInit {
       firstName: [null, Validators.required],
       lastName: [null, Validators.required],
       password: [null, [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
-      // confirmPassword: [null, Validators.required],
+      confirmPassword: [null, Validators.required],
       address: [null, Validators.required],
       dob: [null, Validators.required],
       company: [null, Validators.required],
     },
-      // {
-      //   validators: [Validation.match('password', 'confirmPassword')]
-      // }
+      {
+        validators: [Validation.match('password', 'confirmPassword')]
+      }
       );
   }
   onSubmit(form: NgForm) {
@@ -45,7 +45,8 @@ export class SignUpComponent implements OnInit {
       res => {
         this.showSucessMessage = true;
         this._snackBar.open("Register successfully ", 'Done');
-        // this.resetForm(form);
+        this.resetForm(form);
+        this.router.navigateByUrl('/login');
       },
       err => {
         if (err.status === 422) {
@@ -62,9 +63,13 @@ export class SignUpComponent implements OnInit {
   }
 
   resetForm(form: NgForm) {
-    this.userService.selectedUser = {
-      email: '',
-      password: ''
+    this.userService.selectedEmployee = {
+      firstName: '',
+      lastName: '',
+      address: '',
+      dob: '',
+      mobile: '',
+      city: '',
     };
     form.resetForm();
     this.serverErrorMessages = '';
