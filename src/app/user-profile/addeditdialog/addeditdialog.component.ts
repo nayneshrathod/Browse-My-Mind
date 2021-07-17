@@ -33,9 +33,7 @@ export class AddeditdialogComponent implements OnInit {
         city: [null, Validators.required],
       });
     }
-    if (this.data['requestAction'] == 'edit') {
-      console.log('in edit ', this.data.requestActionData._id);
-
+    if (this.data['requestAction'] == 'edit') { 
       this.empForm = this.fb.group({
         firstName: [this.data.requestActionData.firstName, Validators.required],
         lastName: [this.data.requestActionData.lastName, Validators.required],
@@ -53,17 +51,17 @@ export class AddeditdialogComponent implements OnInit {
       this.userService.addemp(form.value).subscribe(
         res => {
           this.dialogRef.close({ success: true });
-          this._snackBar.open("Employee successfully Added", 'Yes');
+          this._snackBar.open("Employee successfully Added", 'Yes', { duration: 2, });
         },
         err => {
           if (err.status === 422) {
             this.dialogRef.close({ success: false });
             this.serverErrorMessages = err.error.join('<br/>');
-            this._snackBar.open(this.serverErrorMessages, 'NO');
+            this._snackBar.open(this.serverErrorMessages, 'NO', { duration: 2, });
           }
           else
             this.serverErrorMessages = 'Something went wrong.Please contact admin.';
-          this._snackBar.open(this.serverErrorMessages, 'NO');
+          this._snackBar.open(this.serverErrorMessages, 'NO', { duration: 2, });
         });
     }
     if (this.data['requestAction'] == 'edit') {
@@ -71,18 +69,19 @@ export class AddeditdialogComponent implements OnInit {
       this.userService.editemp(this.data.requestActionData._id, form.value).subscribe(
         res => {
           this.dialogRef.close({ success: true });
-          this._snackBar.open("Emplyee Updated Successfully", 'Done');
+          this._snackBar.open("Emplyee Updated Successfully", 'Done', { duration: 2, });
         },
         err => {
           if (err.status === 422) {
             this.dialogRef.close({ success: false });
             this.serverErrorMessages = err.error.join('<br/>');
-            this._snackBar.open(this.serverErrorMessages, 'Cancel');
+            this._snackBar.open(this.serverErrorMessages, 'Cancel', { duration: 2, });
 
           }
           else
             this.serverErrorMessages = 'Something went wrong.Please contact admin.';
-          this._snackBar.open(this.serverErrorMessages, 'Cancel');
+          
+          this._snackBar.open(this.serverErrorMessages, 'Cancel', { duration: 2, });
 
         });
     }

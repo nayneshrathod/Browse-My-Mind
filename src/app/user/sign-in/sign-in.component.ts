@@ -37,7 +37,7 @@ export class SignInComponent implements OnInit {
         this.router.navigateByUrl('/userprofile');
       },
       err => {
-        this._snackBar.open("Somthing went Wrong", 'ok');
+        this._snackBar.open("Somthing went Wrong", 'ok', { duration: 2, });
       }
     );
   }

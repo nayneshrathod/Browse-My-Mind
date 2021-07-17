@@ -25,7 +25,7 @@ export class UserProfileComponent implements OnInit {
     }, 500);
   
   }
-  displayedColumns: string[] = ['firstName', 'lastName', 'mobile', 'dob', 'city', 'address', 'Actions'];
+  displayedColumns: string[] = ['Full Name'  ,'mobile', 'dob', 'city', 'address', 'Actions'];
   userDetails: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -63,7 +63,7 @@ export class UserProfileComponent implements OnInit {
     // const dialogRef = this.dialog.open(AddeditdialogComponent);
     let dialogRef = this.dialog.open(AddeditdialogComponent, {
       disableClose: true,
-      width: '40%',
+      width: '370px',
       data: { requestAction: action, requestActionData: data, }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -86,18 +86,14 @@ export class UserProfileComponent implements OnInit {
     if (confirm('Are you sure to delete this record ?') == true) {
       this.userService.delemp(id)
         .subscribe(res => {
-          this._snackBar.open("deleted", 'OK');
-        // this.getAllEMp();
+          this._snackBar.open("Deleted Employee", 'OK', { duration: 2, });
         this.ngOnInit();
-
         },
           err => {
-            this._snackBar.open('Something went wrong.Please contact admin.', 'ok');
+            this._snackBar.open('Something went wrong.Please contact admin.', 'ok', { duration: 2, });
           })
-          
     };
     if (this.userService.isLoggedIn())
     this.router.navigateByUrl('/userprofile');
-    // this._snackBar.open('Your Not Delete this Employee, Thank you', 'Ohh');
   }
 }

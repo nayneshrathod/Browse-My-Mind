@@ -1,64 +1,89 @@
-<div *ngIf="data['requestAction'] == 'add' || data['requestAction'] == 'edit'">
+<div   *ngIf="data['requestAction'] == 'add' || data['requestAction'] == 'edit'">
   <mat-card-title>{{ data['requestAction'] }} </mat-card-title>
-  <form #form="ngForm" [formGroup]="empForm" (ngSubmit)="onSubmit(form.form)" class="shipping-card">
+  <form #form="ngForm" [formGroup]="empForm" (ngSubmit)="onSubmit(form.form)"  >
     <mat-card-content>
 
       <div class="row">
         <div class="col">
           <!-- firstName -->
           <mat-form-field class="full-width">
-            <input matInput placeholder="First Name" formControlName="firstName" required>
+            <input matInput [pattern]="'^[a-zA-Z ]*$'" placeholder="First Name" formControlName="firstName" required>
             <mat-error
               *ngIf="empForm.controls['firstName'].hasError('required') && empForm.controls['firstName'].touched">
-              firstNameReq </mat-error>
+              firstName Req </mat-error>
+              <mat-error
+              *ngIf="empForm.controls['firstName'].hasError('pattern') " >
+                  firstName is Not allow   </mat-error>
           </mat-form-field>
         </div>
+      </div>
+
+      <div class="row">
+
         <div class="col">
           <!-- last name -->
           <mat-form-field class="full-width">
-            <input matInput placeholder="Last Name" formControlName="lastName" required>
+            <input matInput placeholder="Last Name" [pattern]="'^[a-zA-Z ]*$'"  formControlName="lastName" required>
             <mat-error
               *ngIf="empForm.controls['lastName'].hasError('required') && empForm.controls['lastName'].touched">
-              lastNameReq </mat-error>
+              lastName Required </mat-error>
+              <mat-error
+              *ngIf="empForm.controls['lastName'].hasError('pattern') " >
+                  Last tName is Not allow   </mat-error>
           </mat-form-field>
         </div>
       </div><!-- date of birth -->
-      <mat-form-field class="full-width">
-        <input matInput placeholder=" Date of Birth  " type="date" formControlName="dob" required>
-        <mat-error *ngIf="empForm.controls['dob'].hasError('required') && empForm.controls['dob'].touched">dobReq
-        </mat-error>
-      </mat-form-field>
-      <!-- address-->
-      <mat-form-field class="full-width">
-        <textarea matInput placeholder=" Address " formControlName="address" required></textarea>
-        <mat-error *ngIf="empForm.controls['address'].hasError('required') && empForm.controls['address'].touched">
-          addressReq </mat-error>
-      </mat-form-field>
+      <div class="row">
+        <mat-form-field class="full-width">
+          <input matInput placeholder=" Date of Birth  " type="date" formControlName="dob" required>
+          <mat-error *ngIf="empForm.controls['dob'].hasError('required') && empForm.controls['dob'].touched">
+            Date Of Birth Is Required
+          </mat-error>
+        </mat-form-field>
 
+        <!-- address-->
+      </div>
+      <div class="row">
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder=" Address " formControlName="address" required></textarea>
+          <mat-error *ngIf="empForm.controls['address'].hasError('required') && empForm.controls['address'].touched">
+            Address id Required </mat-error>
+        </mat-form-field>
+      </div>
       <div class="row">
         <div class="col">
           <!-- city -->
           <mat-form-field class="full-width">
-            <input matInput placeholder=" City" formControlName="city" type="text" required>
+            <input matInput [pattern]="'^[a-zA-Z ]*$'"  placeholder=" City" formControlName="city" type="text" required>
             <mat-error *ngIf="empForm.controls['city'].hasError('required') && empForm.controls['city'].touched">
-              cityReq
+              city is Required
             </mat-error>
+            <mat-error
+            *ngIf="empForm.controls['city'].hasError('pattern') " >
+                City is Not allow   </mat-error>
           </mat-form-field>
         </div>
+      </div>
+
+      <div class="row">
 
         <div class="col">
           <!-- mobile -->
           <mat-form-field class="full-width">
-            <input matInput placeholder=" Mobile Number  (Ex: +91xxxxxxxxxx)" formControlName="mobile" type="mobile"
+            <input matInput placeholder=" Mobile Number  (Ex: +91xxxxxxxxxx)" formControlName="mobile" type="mobile" minlength="10"  maxlength="13" [pattern]="'^((\\+91-?)|0)?[0-9]{10}$'"
               required>
             <mat-error *ngIf="empForm.controls['mobile'].hasError('required') && empForm.controls['mobile'].touched">
               mobile Req</mat-error>
+              
+            <mat-error *ngIf="empForm.controls['mobile'].hasError('pattern') ">
+               Please, Enter 10 digit Mobile Number</mat-error>
           </mat-form-field>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" [disabled]="!empForm.valid || isButtonDisabled"> Submit </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" [disabled]="!empForm.valid || isButtonDisabled"> Submit </button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-raised-button type="button" (click)="cancel()">Cancel </button>
     </mat-card-actions>
   </form>

@@ -18,7 +18,7 @@ export class SignUpComponent implements OnInit {
   signInForm: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar,private router: Router, public userService: UserService) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, public userService: UserService) {
   }
 
   ngOnInit() {
@@ -38,26 +38,26 @@ export class SignUpComponent implements OnInit {
       {
         validators: [Validation.match('password', 'confirmPassword')]
       }
-      );
+    );
   }
   onSubmit(form: NgForm) {
     this.userService.postUser(form.value).subscribe(
       res => {
         this.showSucessMessage = true;
-        this._snackBar.open("Register successfully ", 'Done');
+        this._snackBar.open("Register successfully ", 'Done', { duration: 2, });
         this.resetForm(form);
         this.router.navigateByUrl('/login');
       },
       err => {
         if (err.status === 422) {
           this.serverErrorMessages = err.error.join('<br/>');
-          this._snackBar.open(this.serverErrorMessages ? this.serverErrorMessages:'error occure', 'ok');
+          this._snackBar.open(this.serverErrorMessages ? this.serverErrorMessages : 'error occure', 'ok', { duration: 2, });
 
         }
         else
           this.serverErrorMessages = 'Something went wrong.Please contact admin.';
-          this._snackBar.open(this.serverErrorMessages, 'ok');
-          
+        this._snackBar.open(this.serverErrorMessages, 'ok', { duration: 2, });
+
       }
     );
   }
@@ -74,7 +74,7 @@ export class SignUpComponent implements OnInit {
     form.resetForm();
     this.serverErrorMessages = '';
   }
- 
+
 }
 export default class Validation {
   static match(controlName: string, checkControlName: string): ValidatorFn {
