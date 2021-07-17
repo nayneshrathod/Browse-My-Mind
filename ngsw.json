@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626552832982,
+  "timestamp": 1626556724701,
   "index": "https://nayneshrathod.github.io/Browse-My-Mind/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://nayneshrathod.github.io/Browse-My-Mind/favicon.ico",
         "https://nayneshrathod.github.io/Browse-My-Mind/index.html",
-        "https://nayneshrathod.github.io/Browse-My-Mind/main.f89c0b7caaaeba8de0bf.js",
+        "https://nayneshrathod.github.io/Browse-My-Mind/main.72f41d04c3f661bb9ebf.js",
         "https://nayneshrathod.github.io/Browse-My-Mind/manifest.webmanifest",
         "https://nayneshrathod.github.io/Browse-My-Mind/polyfills.94daefd414b8355106ab.js",
         "https://nayneshrathod.github.io/Browse-My-Mind/runtime.7b63b9fd40098a2e8207.js",
@@ -52,9 +52,9 @@
     "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://nayneshrathod.github.io/Browse-My-Mind/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://nayneshrathod.github.io/Browse-My-Mind/index.html": "4a3111796f6e4423902db8b2325a87979cd06bb0",
-    "https://nayneshrathod.github.io/Browse-My-Mind/main.f89c0b7caaaeba8de0bf.js": "5894f91c779c8b1b3cec288aec159b6aed40c00f",
-    "https://nayneshrathod.github.io/Browse-My-Mind/manifest.webmanifest": "63b272452f7323ec09705c84044faa394ce82a79",
+    "https://nayneshrathod.github.io/Browse-My-Mind/index.html": "9e11a07803d71d7251917c90fc9db401dfc7ece7",
+    "https://nayneshrathod.github.io/Browse-My-Mind/main.72f41d04c3f661bb9ebf.js": "fc27da5a70377e57732eeffa7df1386a89bad5a4",
+    "https://nayneshrathod.github.io/Browse-My-Mind/manifest.webmanifest": "a00e03d66a4414f5ed7f0bd4cee06d3824e5f2e7",
     "https://nayneshrathod.github.io/Browse-My-Mind/polyfills.94daefd414b8355106ab.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
     "https://nayneshrathod.github.io/Browse-My-Mind/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "https://nayneshrathod.github.io/Browse-My-Mind/styles.95fcb7129db93e7902ac.css": "7e2d1bda10ecfef1e28c836b81295193a5edafd7"
