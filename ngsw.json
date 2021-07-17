@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1626490656326,
+  "index": "https://nayneshrathod.github.io/Browse-My-Mind/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://nayneshrathod.github.io/Browse-My-Mind/favicon.ico",
+        "https://nayneshrathod.github.io/Browse-My-Mind/index.html",
+        "https://nayneshrathod.github.io/Browse-My-Mind/main.64d17f5b22a54ab90858.js",
+        "https://nayneshrathod.github.io/Browse-My-Mind/manifest.webmanifest",
+        "https://nayneshrathod.github.io/Browse-My-Mind/polyfills.94daefd414b8355106ab.js",
+        "https://nayneshrathod.github.io/Browse-My-Mind/runtime.7b63b9fd40098a2e8207.js",
+        "https://nayneshrathod.github.io/Browse-My-Mind/styles.c87e8ce19886e21f3d8c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-128x128.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-144x144.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-152x152.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-192x192.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-384x384.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-512x512.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-72x72.png",
+        "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://nayneshrathod.github.io/Browse-My-Mind/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://nayneshrathod.github.io/Browse-My-Mind/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://nayneshrathod.github.io/Browse-My-Mind/index.html": "557718602ddd655c05064533c37ec6a470565e01",
+    "https://nayneshrathod.github.io/Browse-My-Mind/main.64d17f5b22a54ab90858.js": "4cb43a59dd6ae34689b51cf43c4e713d198e10fe",
+    "https://nayneshrathod.github.io/Browse-My-Mind/manifest.webmanifest": "63b272452f7323ec09705c84044faa394ce82a79",
+    "https://nayneshrathod.github.io/Browse-My-Mind/polyfills.94daefd414b8355106ab.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "https://nayneshrathod.github.io/Browse-My-Mind/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://nayneshrathod.github.io/Browse-My-Mind/styles.c87e8ce19886e21f3d8c.css": "7e2d1bda10ecfef1e28c836b81295193a5edafd7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
