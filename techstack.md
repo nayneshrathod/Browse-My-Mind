@@ -40,7 +40,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [nayneshrathod/Browse-My-Mind](https://github.com/nayneshrathod/Browse-My-Mind)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|37<br/>Tools used|01/04/24 <br/>Report generated|
+|37<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
